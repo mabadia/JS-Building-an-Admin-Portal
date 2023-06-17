@@ -20,7 +20,7 @@ function renderBook(book) {
     saveButton.addEventListener('click', () => {
         fetch('http://localhost:3001/updateBook', {
             method: 'PATCH',
-            header: {
+            headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
